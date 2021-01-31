@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+".\obj\system_stm32f10x.o"
+".\obj\startup_stm32f10x_md.o"
+".\obj\core_cm3.o"
+".\obj\misc.o"
+".\obj\stm32f10x_exti.o"
+".\obj\stm32f10x_flash.o"
+".\obj\stm32f10x_gpio.o"
+".\obj\stm32f10x_rcc.o"
+".\obj\stm32f10x_tim.o"
+".\obj\stm32f10x_usart.o"
+".\obj\hal_key.o"
+".\obj\hal_rgb.o"
+".\obj\mcu_api.o"
+".\obj\protocol.o"
+".\obj\system.o"
+".\obj\main.o"
+".\obj\stm32f10x_it.o"
+".\obj\user_flash.o"
+".\obj\user_timer.o"
+".\obj\user_uart.o"
+--strict --scatter ".\obj\wifi_mcusdk_dev_stm32_v3.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\list\wifi_mcusdk_dev_stm32_v3.map" -o .\obj\wifi_mcusdk_dev_stm32_v3.0

@@ -1,0 +1,70 @@
+
+
+/****************系统数据类型定义start********************************/
+//8bit单字节
+typedef signed char         s8;
+typedef unsigned char       u8;
+
+//16bit双字节
+typedef signed short        s16;     
+typedef unsigned short      u16;
+
+//32bit四字节
+#ifndef s32
+typedef signed long         s32;    
+#endif
+
+#ifndef u32
+typedef unsigned long       u32;
+#endif
+
+//字符串
+typedef signed char *       string;
+
+
+/*定义常量*/
+#ifndef         TRUE
+#define         TRUE                1
+#endif
+//
+#ifndef         FALSE
+#define         FALSE               0
+#endif
+//
+#define         SUCCESS             1
+#define         ERROR               0
+#define         NULL                ((void *) 0)
+#define         INVALID             0xFF
+//
+
+//帧的字节顺序
+typedef enum {
+    HEAD_FIRST = 0x0,
+    HEAD_SECOND,
+    PROTOCOL_VERSION,
+    FRAME_TYPE,
+    LENGTH_HIGH,
+    LENGTH_LOW,
+    DATA_START,
+} FRAME_ORDER_E;
+
+//数据帧类型
+typedef enum {
+    HEAT_BEAT_CMD = 0,                          //心跳包
+    PRODUCT_INFO_CMD,                           //产品信息
+    WORK_MODE_CMD,                              //查询MCU 设定的模块工作模式	
+    WIFI_STATE_CMD,                             //wifi工作状态	
+    WIFI_RESET_CMD,                             //重置wifi
+    WIFI_MODE_CMD,                              //选择smartconfig/AP模式	
+    DATA_QUERT_CMD,                             //命令下发
+    STATE_UPLOAD_CMD,                           //状态上报	 
+    STATE_QUERY_CMD,                            //状态查询   
+    UPDATE_QUERY_CMD,                           //升级查询
+    UPDATE_START_CMD,                           //升级开始
+    UPDATE_TRANS_CMD,                           //升级传输
+    GET_ONLINE_TIME_CMD,                        //获取系统时间
+    FACTORY_MODE_CMD,                           //进入产测模式    
+} FRAME_TYPE_E; 
+
+
+typedef void(*UART_SEND)(u8 ch);

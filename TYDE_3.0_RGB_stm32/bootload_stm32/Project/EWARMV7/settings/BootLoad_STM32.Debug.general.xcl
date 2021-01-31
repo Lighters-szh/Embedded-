@@ -1,0 +1,15 @@
+"D:\RJ\IAR\arm\bin\armproc.dll" 
+
+"D:\RJ\IAR\arm\bin\armjlink.dll" 
+
+"C:\Users\xiaoma\Desktop\¿ª·¢°å\KeilÐÞ¸Ä¼æÈÝ\bootload_stm32\Project\EWARMV7\Debug\Exe\BootLoad_STM32.out" 
+
+--plugin "D:\RJ\IAR\arm\bin\armbat.dll" 
+
+--device_macro "D:\RJ\IAR\arm\config\debugger\ST\STM32F1xx_XL.dmac" 
+
+--flash_loader "D:\RJ\IAR\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
+
+
+
+
